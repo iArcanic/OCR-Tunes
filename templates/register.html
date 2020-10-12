@@ -1,2 +1,39 @@
 {% extends "base.html" %}
 {% block title %}Register an Account{% endblock %}
+{% block content %}
+<form action="" method=post>
+  <p>
+    {{form.first_name.label}}<br>
+    {{form.first_name(size=30)}}
+  </p>
+  <p>
+    {{form.last_name.label}}<br>
+    {{form.last_name(size=30)}}
+  </p>
+  <p>
+    {{form.username.label}}<br>
+    {{form.username(size=30)}}
+  </p>
+  <p>
+    {{form.password.label}}<br>
+    {{form.password(size=30)}}
+  </p>
+  <p>
+    {{form.confirmPassword.label}}<br>
+    {{form.confirmPassword(size=30)}}
+  </p>
+  <p>
+    {{form.genre.label}}<br>
+    {{form.genre(size=30)}}
+  </p>
+  <p>
+    {{form.favourite_artist.label}}<br>
+    {{form.favourite_artist(size=30)}}
+  </p>
+  <p>
+    {{form.birthday.label}}<br>
+    {{form.birthday(size=30)}}
+  </p>
+  <p>{{form.submit()}}</p>
+</form>
+{% endblock %}

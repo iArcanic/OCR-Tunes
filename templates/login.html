@@ -1,2 +1,15 @@
 {% extends "base.html" %}
 {% block title %}Sign In{% endblock %}
+{% block content %}
+<form action="" method=post>
+  <p>
+    {{form.username.label}}<br>
+    {{form.username(size=30)}}
+  </p>
+  <p>
+    {{form.password.label}}<br>
+    {{form.password(size=30)}}
+  </p>
+  <p>{{form.submit()}}</p>
+</form>
+{% endblock %}
