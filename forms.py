@@ -14,7 +14,7 @@ class RegisterForm(FlaskForm):
     last_name = StringField('Last Name', [DataRequired()])
     username = StringField('Username', [DataRequired()])
     password = PasswordField('Password', [DataRequired(message="Please enter a password.")])
-    confirmPassword = PasswordField('Repeat Password', [EqualTo(password, message='Passwords must match.')])
+    confirmPassword = PasswordField('Confirm Password', [EqualTo(password, message='Passwords must match.')])
     genre = SelectField(
         'Genre', [DataRequired()],
         choices=[('Pop', 'pop'),

@@ -1,19 +1,7 @@
-import os
-import shutil
-import csv
-
-
-def create_directory(directory):
-    if not os.path.exists(directory):
-        os.makedirs(directory)
-
-
-create_directory("./database/")
-
-
 def integer_validation(x, y):
     global user_integer_input
     while True:
+        print("Welcome to OCR Tunes! \n Please enter a time length for your Pop playlist. e.g. 5 for 5 mins etc. Max 10 mins.")
         user_integer_input = input(f"Enter a number between {x} and {y}: ")
         if not user_integer_input.isdigit():
             print("Invalid input. Must be an integer. \n")
